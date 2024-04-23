@@ -2,8 +2,6 @@ import game from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const isEven = (num) => num % 2 === 0;
-
 function randomInteger(min, max) {
   const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
@@ -30,7 +28,7 @@ const calculateExpression = (num1, num2, operator) => {
 const getQuestionAndAnswer = () => {
   const num1 = randomInteger(1, 30);
   const num2 = randomInteger(1, 30);
-  const operator = generateRandomOperator()
+  const operator = generateRandomOperator();
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = `${calculateExpression(num1, num2, operator)}`;
 
