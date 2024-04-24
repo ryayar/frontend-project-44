@@ -25,6 +25,7 @@ const calculateExpression = (num1, num2, operator) => {
       return null;
   }
 };
+
 const getQuestionAndAnswer = () => {
   const num1 = randomInteger(1, 30);
   const num2 = randomInteger(1, 30);
