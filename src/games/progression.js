@@ -1,4 +1,4 @@
-import game from '../index.js';
+import { game, randomInteger } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -17,10 +17,10 @@ const hideElementInProgression = (progression, hiddenIndex) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const length = Math.floor(Math.random() * (10 - 5 + 1)) + 5; // Длина прогрессии от 5 до 10 чисел
-  const start = Math.floor(Math.random() * 50) + 1; // Стартовое число от 1 до 50
-  const step = Math.floor(Math.random() * 10) + 1; // Шаг прогрессии от 1 до 10
-  const hiddenIndex = Math.floor(Math.random() * length);
+  const length = randomInteger(5, 10);
+  const start = randomInteger(1, 50);
+  const step = randomInteger(1, 10);
+  const hiddenIndex = randomInteger(0, length - 1);
 
   const progression = generateProgression(length, start, step);
   const question = `${hideElementInProgression(progression, hiddenIndex)}`;

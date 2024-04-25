@@ -1,11 +1,6 @@
-import game from '../index.js';
+import { game, randomInteger } from '../index.js';
 
 const description = 'What is the result of the expression?';
-
-function randomInteger(min, max) {
-  const rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-}
 
 const generateRandomOperator = () => {
   const operators = ['+', '-', '*'];
